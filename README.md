@@ -1,1 +1,1 @@
-Dotfiles for my Linux environment
+Dotfiles for my Linux setup

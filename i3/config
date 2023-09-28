@@ -177,17 +177,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-#       status_command i3status
-	font pango: Inconsolata 12
-    	position top
-    	tray_output none
-	status_command /usr/bin/bumblebee-status \
-	-m battery date time \
-	-t iceberg-dark-powerline 
-}
+# My config modifications:
 
 # kill focused window
 bindsym $mod+q kill
@@ -200,4 +190,14 @@ exec_always feh --bg-fill ~/.config/wallpapers/darkblueriver.jpg
 
 # auto lock system after 300 seconds
 exec_always --no-startup-id xset dpms 0 0 300 &
-exec_always --no-startup-id xss-lock -- i3lock -c 000000 &
+# exec_always --no-startup-id xss-lock -- i3lock -c 000000 &
+
+# activate touchpad tap
+exec_always --no-startup-id xinput set-prop "ELAN071A:00 04F3:30FD Touchpad" "libinput Tapping Enabled" 1
+
+# enable brightness keys
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
+# activate polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
