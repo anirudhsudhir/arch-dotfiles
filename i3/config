@@ -185,7 +185,7 @@ bindsym $mod+q kill
 # start a terminal
 bindsym $mod+Return exec alacritty
 # set wallpaper
-exec_always feh --bg-fill ~/.config/wallpapers/darkblueriver.jpg
+exec_always feh --bg-fill ~/.config/wallpapers/snow.jpg
 
 # auto lock system after 300 seconds
 exec_always --no-startup-id xset dpms 0 0 300 &
@@ -200,3 +200,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # activate polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+default_border none
+gaps outer 5px
+gaps inner 10px
