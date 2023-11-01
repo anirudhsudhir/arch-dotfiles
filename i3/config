@@ -188,7 +188,7 @@ bindsym $mod+Return exec alacritty
 exec_always feh --bg-fill ~/.config/wallpapers/snow.jpg
 
 # auto lock system after 300 seconds
-exec_always --no-startup-id xset dpms 0 0 300 &
+exec_always --no-startup-id xset dpms 0 0 300 
 # exec_always --no-startup-id xss-lock -- i3lock -c 000000 &
 
 # activate touchpad tap
